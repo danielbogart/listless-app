@@ -1,0 +1,59 @@
+body {
+	text-align: center;
+}
+
+.logo {
+	height: 300px;
+	width: 100%;
+	text-align: center;
+}
+
+.circle {
+	display: inline-block;
+	width: 6em;
+	height: 6em;
+	border-radius: 100%;
+	background-color: rgb(252, 0, 211);
+	margin-top: 2em;
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 30px;
+}
+
+.input {
+	line-height: 3em;
+	border-radius: 1em;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 15px;
+	padding-left: 1em;
+	border: 2px groove;
+	margin-bottom: 1em;
+}
+
+.center {
+	width: 100%;
+	text-align: center;
+	div-align
+}
+
+.newitem {
+	display: block;
+	line-height: 2.8em;
+	border-right: 1em;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 15px;
+	border: 2px groove;
+	border-radius: 1em;
+	width: 500px;
+	text-align: center;
+	margin-top: .75em;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url("images/x.png");
+	background-position: 0% 50%;
+	background-repeat: no-repeat;
+	background-size: 10%;
+}
+
