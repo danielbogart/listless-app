@@ -7,6 +7,7 @@ $(document).keyup(function(event) {
 		var createtrash = document.createElement('div');
 
 		create.className = 'newitem';
+		$(create).attr('draggable', true);
 		createx.className = 'crossout';
 		createtrash.className = 'trash';
 		create.innerHTML = listy;
@@ -27,7 +28,6 @@ $(document).keyup(function(event) {
 				$('.newitem:last').append(createtrash);
 				$('.input').attr("placeholder", "Type list item then hit Enter to add");
 
-				var checked = 0;
 			}
 
 		else {
@@ -38,25 +38,16 @@ $(document).keyup(function(event) {
 				$('.newitem').append(createx)
 				$('.newitem').append(createtrash);
 
-				var checked = 0;
+			}
+
 		}
 
 	}
 
-	}
-
-	$(this).find('.crossout').click(function() {
-		
-		if (checked === 1) {
-			$(this).closest('.newitem').css({'opacity': '1', 'text-decoration': 'none'});
-			checked = 0;
-		}
-
-		else {
-			$(this).closest('.newitem').css({'opacity': '.5', 'text-decoration': 'line-through'});
-			checked = 1;
-		}
-	})
+	$(document).on('click', '.crossout', function(event) {
+		$(this).parent('.newitem').toggleClass('xitem');
+		event.stopImmediatePropagation();
+	});
 
 	$(this).find('.trash').click(function() {
 

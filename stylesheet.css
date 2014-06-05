@@ -78,24 +78,8 @@ body {
 }
 
 .xitem {
-	display: block;
-	line-height: 2.8em;
-	border-right: 1em;
-	font-family: 'Ubuntu', sans-serif;
-	font-size: 15px;
-	border: 2px groove;
-	border-radius: 1em;
-	width: 500px;
-	text-align: center;
-	margin-top: .75em;
-	margin-right: auto;
-	margin-left: auto;
-	background-image: url("images/x.png");
-	background-position: 0% 50%;
-	background-repeat: no-repeat;
-	background-size: 10%;
 	opacity: .5;
-	text-decoration: line-through;	
+	text-decoration: line-through;
 }
 
 
