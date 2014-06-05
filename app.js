@@ -37,9 +37,9 @@ $(document).keyup(function(event) {
 				$('.newitem').append(createx)
 				$('.newitem').append(createtrash);
 
-		}
+			}
 
-	}
+		}
 
 	}
 
@@ -47,10 +47,12 @@ $(document).keyup(function(event) {
 
 		if ($(this).closest('.newitem').hasClass('xitem')) {
 			$(this).closest('.newitem').removeClass('xitem');
+			console.log('remove x');
 		}
 
 		else {
 			$(this).closest('.newitem').addClass('xitem');
+			console.log('x out');	
 		}
 
 	})
