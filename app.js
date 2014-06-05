@@ -27,7 +27,6 @@ $(document).keyup(function(event) {
 				$('.newitem:last').append(createtrash);
 				$('.input').attr("placeholder", "Type list item then hit Enter to add");
 
-				var checked = 0;
 			}
 
 		else {
@@ -38,7 +37,6 @@ $(document).keyup(function(event) {
 				$('.newitem').append(createx)
 				$('.newitem').append(createtrash);
 
-				var checked = 0;
 		}
 
 	}
@@ -46,16 +44,16 @@ $(document).keyup(function(event) {
 	}
 
 	$(this).find('.crossout').click(function() {
-		
-		if (checked === 1) {
-			$(this).closest('.newitem').css({'opacity': '1', 'text-decoration': 'none'});
-			checked = 0;
+
+		if ($(this).closest('.newitem').hasClass('xitem')) {
+			$(this).closest('.newitem').removeClass('xitem');
 		}
 
 		else {
-			$(this).closest('.newitem').css({'opacity': '.5', 'text-decoration': 'line-through'});
-			checked = 1;
+			$(this).closest('.newitem').addClass('xitem');
+			console.log('test');
 		}
+
 	})
 
 	$(this).find('.trash').click(function() {

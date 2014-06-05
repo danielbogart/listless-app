@@ -78,6 +78,12 @@ body {
 }
 
 .xitem {
+	opacity: .5;
+	text-decoration: line-through;
+}
+
+/*
+.xitem {
 	display: block;
 	line-height: 2.8em;
 	border-right: 1em;
@@ -97,5 +103,6 @@ body {
 	opacity: .5;
 	text-decoration: line-through;	
 }
+*/
 
 
