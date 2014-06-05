@@ -7,6 +7,7 @@ $(document).keyup(function(event) {
 		var createtrash = document.createElement('div');
 
 		create.className = 'newitem';
+		$(create).attr('draggable', true);
 		createx.className = 'crossout';
 		createtrash.className = 'trash';
 		create.innerHTML = listy;
@@ -43,11 +44,9 @@ $(document).keyup(function(event) {
 
 	}
 
-	$('.crossout').click(function() {
-
-		$(this).closest('.newitem').toggleClass('xitem');
-		console.log('toggled');
-
+	$(document).on('click', '.crossout', function(event) {
+		$(this).parent('.newitem').toggleClass('xitem');
+		event.stopImmediatePropagation();
 	});
 
 	$(this).find('.trash').click(function() {
