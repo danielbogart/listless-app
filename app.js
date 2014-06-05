@@ -43,19 +43,12 @@ $(document).keyup(function(event) {
 
 	}
 
-	$(this).find('.crossout').click(function() {
+	$('.crossout').click(function() {
 
-		if ($(this).closest('.newitem').hasClass('xitem')) {
-			$(this).closest('.newitem').removeClass('xitem');
-			console.log('remove x');
-		}
+		$(this).closest('.newitem').toggleClass('xitem');
+		console.log('toggled');
 
-		else {
-			$(this).closest('.newitem').addClass('xitem');
-			console.log('x out');	
-		}
-
-	})
+	});
 
 	$(this).find('.trash').click(function() {
 
