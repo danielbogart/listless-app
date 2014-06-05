@@ -51,7 +51,6 @@ $(document).keyup(function(event) {
 
 		else {
 			$(this).closest('.newitem').addClass('xitem');
-			console.log('test');
 		}
 
 	})
