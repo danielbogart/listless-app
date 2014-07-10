@@ -63,11 +63,10 @@ body {
 .center {
 	width: 100%;
 	text-align: center;
-	div-align
 }
 
 .newitem {
-	display: block;
+	display: inline-block;
 	line-height: 2.8em;
 	border-right: 1em;
 	font-family: 'Ubuntu', sans-serif;
@@ -79,10 +78,6 @@ body {
 	margin-top: .75em;
 	margin-right: auto;
 	margin-left: auto;
-}
-
-.newitem.over {
-	border: 2px dashed #000;
 }
 
 .crossout {
@@ -122,4 +117,7 @@ body {
 	text-decoration: line-through;
 }
 
-
+#sortable {
+	width: 500px;
+	margin: 0 auto;
+}
