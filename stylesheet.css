@@ -81,6 +81,10 @@ body {
 	margin-left: auto;
 }
 
+.newitem.over {
+	border: 2px dashed #000;
+}
+
 .crossout {
 	background-image: url("images/x.png");
 	display: inline-block;

@@ -1,3 +1,12 @@
+$(document).ready(function() {
+
+  var dragging = function() {
+    	$('.circle').draggable();
+	};
+
+	dragging();
+
+
 $(document).keyup(function(event) {
 	if (event.which === 13) {
 		var listy = $('.input').val();
@@ -24,6 +33,7 @@ $(document).keyup(function(event) {
 				$('.newitem:last').after(create)
 				$('.newitem:last').append(createx)
 				$('.newitem:last').append(createtrash);
+				$('#sortable').sortable();
 				$('.input').attr("placeholder", "Type list item then hit Enter to add");
 
 			}
@@ -32,9 +42,10 @@ $(document).keyup(function(event) {
 
 				$('.input').val('');
 
-				$('.input').after(create)
+				$('#sortable').append(create)
 				$('.newitem').append(createx)
 				$('.newitem').append(createtrash);
+				$('#sortable').sortable();
 
 			}
 
@@ -52,5 +63,8 @@ $(document).keyup(function(event) {
 		$(this).parent().remove();
 
 	})
+
+
+})
 
 })
