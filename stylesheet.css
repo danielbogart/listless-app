@@ -93,6 +93,10 @@ body {
 	vertical-align: middle;
 }
 
+.crossout:hover {
+	cursor: pointer;
+}
+
 .trash {
 	background-image: url("images/trash.png");
 	display: inline-block;
@@ -103,6 +107,10 @@ body {
 	background-repeat: no-repeat;
 	background-size: 100%;
 	vertical-align: middle;
+}
+
+.trash:hover {
+	cursor: pointer;
 }
 
 .xitem {

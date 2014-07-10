@@ -7,14 +7,12 @@ $(document).keyup(function(event) {
 		var createtrash = document.createElement('div');
 
 		create.className = 'newitem';
-		$(create).attr('draggable', true);
 		createx.className = 'crossout';
 		createtrash.className = 'trash';
 		create.innerHTML = listy;
 
 		if (listy.length === 0) {
 			$('.input').attr("placeholder", "Please enter an item");
-			//This line may have caused problems with crossing out
 		}
 
 		else {
