@@ -1,3 +1,12 @@
+$(document).ready(function() {
+
+  var dragging = function() {
+    	$('.circle').draggable();
+	};
+
+	dragging();
+
+
 $(document).keyup(function(event) {
 	if (event.which === 13) {
 		var listy = $('.input').val();
@@ -7,14 +16,12 @@ $(document).keyup(function(event) {
 		var createtrash = document.createElement('div');
 
 		create.className = 'newitem';
-		$(create).attr('draggable', true);
 		createx.className = 'crossout';
 		createtrash.className = 'trash';
 		create.innerHTML = listy;
 
 		if (listy.length === 0) {
 			$('.input').attr("placeholder", "Please enter an item");
-			//This line may have caused problems with crossing out
 		}
 
 		else {
@@ -26,6 +33,7 @@ $(document).keyup(function(event) {
 				$('.newitem:last').after(create)
 				$('.newitem:last').append(createx)
 				$('.newitem:last').append(createtrash);
+				$('#sortable').sortable();
 				$('.input').attr("placeholder", "Type list item then hit Enter to add");
 
 			}
@@ -34,9 +42,10 @@ $(document).keyup(function(event) {
 
 				$('.input').val('');
 
-				$('.input').after(create)
+				$('#sortable').append(create)
 				$('.newitem').append(createx)
 				$('.newitem').append(createtrash);
+				$('#sortable').sortable();
 
 			}
 
@@ -54,5 +63,8 @@ $(document).keyup(function(event) {
 		$(this).parent().remove();
 
 	})
+
+
+})
 
 })

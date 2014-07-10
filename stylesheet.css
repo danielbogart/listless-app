@@ -2,6 +2,33 @@ body {
 	text-align: center;
 }
 
+#demoCorner {
+	margin: 0;
+	position: absolute;
+	z-index: 200;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 200px 200px 0 0;
+	border-color: rgba(31, 26, 53, 0.5) transparent transparent transparent;
+
+}
+
+#demoText {
+	position: absolute;
+	margin: 1em 0 0 1em;
+	font-family: 'Ubuntu', 'Arial';
+	color: white;
+	z-index: 300;
+}
+
+#demoText a {
+	text-decoration: none;
+	font-family: 'Ubuntu', 'Arial';
+	color: white;
+	text-decoration: underline;
+}
+
 .logo {
 	height: 300px;
 	width: 100%;
@@ -20,6 +47,7 @@ body {
 	text-align: center;
 	vertical-align: middle;
 	font-size: 30px;
+	line-height: .85em;
 }
 
 .input {
@@ -35,11 +63,10 @@ body {
 .center {
 	width: 100%;
 	text-align: center;
-	div-align
 }
 
 .newitem {
-	display: block;
+	display: inline-block;
 	line-height: 2.8em;
 	border-right: 1em;
 	font-family: 'Ubuntu', sans-serif;
@@ -65,6 +92,10 @@ body {
 	vertical-align: middle;
 }
 
+.crossout:hover {
+	cursor: pointer;
+}
+
 .trash {
 	background-image: url("images/trash.png");
 	display: inline-block;
@@ -77,9 +108,16 @@ body {
 	vertical-align: middle;
 }
 
+.trash:hover {
+	cursor: pointer;
+}
+
 .xitem {
 	opacity: .5;
 	text-decoration: line-through;
 }
 
-
+#sortable {
+	width: 500px;
+	margin: 0 auto;
+}
